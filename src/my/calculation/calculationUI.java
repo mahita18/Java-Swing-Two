@@ -50,8 +50,6 @@ public class calculationUI extends javax.swing.JFrame {
 
         jLabel1.setText("Convert:");
 
-        jLabel2.setText("jLabel2");
-
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "c to f", "f to c" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -121,7 +119,7 @@ public class calculationUI extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         pack();
@@ -138,11 +136,11 @@ public class calculationUI extends javax.swing.JFrame {
            
             if (jComboBox1.getSelectedItem().equals("c to f")){
                 temp = temp*9/5+32;
-                jLabel2.setText("That's " + Double.toString(temp) + " fahrenheit");
+                jLabel2.setText("That's " + Integer.toString((int)(temp+0.5)) + " degrees fahrenheit");
             }
             else{
                 temp = (temp-32)*5/9;
-                jLabel2.setText("That's " + Double.toString(temp)+ " celsius");
+                jLabel2.setText("That's " + Integer.toString((int)(temp+0.5))+ " degrees celsius");
             }
         }
         catch(NumberFormatException err){
